@@ -1,16 +1,16 @@
 package weekonetraining;
 
-public class MyWeekoneTrainingBase extends MyWeekoneTraining {
+public class MyWeekoneTrainingBase {
 	
-	public MyWeekoneTrainingBase() {
-		
-		MyWeekoneTraining newObject = new MyWeekoneTraining();
-		
-		newObject.color = "white";
-		
-		newObject.numbofstudents = 12;
-		
-		newObject.setName("Rene");
+	public String color;
+	protected int numbofstudents;
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }
