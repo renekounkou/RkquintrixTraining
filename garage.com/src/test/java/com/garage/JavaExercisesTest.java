@@ -15,7 +15,7 @@ public class JavaExercisesTest {
 	  boolean expectedResult = true;
 	  System.out.println(compare);
 	  
-	  assertEquals(compare, expectedResult, "the value of price1 is equal to the value of price2");
+	  assertEquals(compare, expectedResult, "The value of price1 is equal to the value of price2");
 	  
 	  
   }
