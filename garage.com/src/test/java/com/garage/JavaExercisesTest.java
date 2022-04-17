@@ -64,9 +64,9 @@ public class JavaExercisesTest {
 	  int y = x++;
 	  int z = x + y;
 	  
-	  int expectedResult1 = 6;
+	  int expectedResult = 7;
 	  
-	  assertEquals(z, expectedResult1, "The incremented value is 6");
+	  assertEquals(z, expectedResult, "The incremented value is 7");
 	  
   }
   @Test
