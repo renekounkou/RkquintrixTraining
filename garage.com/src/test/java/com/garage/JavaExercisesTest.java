@@ -104,7 +104,7 @@ public class JavaExercisesTest {
 	  } else {
 		  System.out.println("You failed.");
 		  int expectedResult = passGrade;
-		  assertEquals(passGrade, expectedResult, "If grade is grade is greater than or equal to 80, "
+		  assertEquals(passGrade, expectedResult, "If grade is greater than or equal to 80, "
 		  		+ "you passed");
 	  }
   }
