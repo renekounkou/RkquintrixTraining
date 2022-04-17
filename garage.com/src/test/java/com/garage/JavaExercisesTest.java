@@ -4,43 +4,48 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
 public class JavaExercisesTest {
+  
   @Test
-  public void comparaTwoValue() {
+  public void compareTwoValues() {
 	  int price1 = 45;
 	  int price2 = 45;
+	  
 	  boolean compare = price1==price2;
 	  boolean expectedResult = true;
-	  System.out.println(compare);
+	  
 	  assertEquals(compare, expectedResult, "The value of price1 is equal to the value of price2");
   }
   @Test
   public void compareTwoReference() {
 	  String lastName = new String("Kounkou");
 	  String familyName = new String("Kounkou");
+	  
 	  boolean result = lastName == familyName;
 	  boolean expectedResult = false;
-	  System.out.println(result);
+	  
+	  
 	  assertEquals(result, expectedResult, "firstName is not equal to lastName using == operator");
   }
   @Test
   public void compareTwoReferenceWithEqual() {
 	  String lastName = new String("Kounkou");
 	  String familyName = new String("Kounkou");
+	  
 	  boolean result = lastName.equals(familyName);
 	  boolean expectedResult = true;
-	  System.out.println(result);
+	  
+	  
 	  assertEquals(result, expectedResult, "firstName is equal to lastName using .equals operator");  
   }
   @Test
   public void demonstrateLogicalANDoperator() {
 	  int age1 = 30;
 	  int age2 = 45;
-	  int totalAge; 
+	  int totalAge = 75; 
 	  if(age1==age2 && age2==age1) {
-		  totalAge = 75;
+	  }
 	  int expectedResult = 75;
 	  assertEquals(totalAge, expectedResult, "total age is equal to 75");
-	  }
   }
   @Test
   public void demonstrateLogicalORoperator() {
@@ -48,33 +53,31 @@ public class JavaExercisesTest {
 	  int age2 = 45;
 	  int totalAge = 75; 
 	  if(age1==age2 || age2==age1) {
-	  totalAge = 75;
+	  
+	  }
 	  int expectedResult = 75;
 	  assertEquals(totalAge, expectedResult, "total age is equal to 75");
-	  }
 }
   @Test
-  public void demonstrateUnaryOperstors() {
+  public void demonstrateUnaryOperators() {
 	  int x = 3;
 	  int y = x++;
 	  int z = x + y;
-	  int w = --z-1;
-	  System.out.println(z);
-	  System.out.println(w);
+	  
 	  int expectedResult1 = 6;
-	  int expectedResult2 = 5;
+	  
 	  assertEquals(z, expectedResult1, "The incremented value is 6");
-	  assertEquals(w, expectedResult2, "The variable w as a value of 5"); 
+	  
   }
   @Test
   public void changeaBooleanVariable() {
 	  int day1 = 7;
 	  int day2 = 7;
+	  
 	  boolean result = day1 == day2;
-	  System.out.println(result);
-	 boolean result1 = day1 != day2;
-	 System.out.println(result1);
-	 boolean expectedResult = false;
+	  boolean result1 = day1 != day2;
+	  boolean expectedResult = false;
+	  
 	 assertEquals(result1, expectedResult, "day1 is equal to day2");
   }
   @Test
@@ -89,7 +92,7 @@ public class JavaExercisesTest {
 	  boolean compareHour = morningHour != afternoonHour;
 	  boolean expectedResult = true;
 	  System.out.println(compareHour);
-	  assertEquals(compareHour, expectedResult, "The Morning hour is different to the Afternoon hour");
+	  assertEquals(afternoonHour, expectedResult, "The Morning hour is different to the Afternoon hour");
 	  }
   }
   @Test
@@ -101,7 +104,8 @@ public class JavaExercisesTest {
 	  } else {
 		  System.out.println("You failed.");
 		  int expectedResult = passGrade;
-		  assertEquals(passGrade, expectedResult, "If grade is eual to 80, you passed");
+		  assertEquals(passGrade, expectedResult, "If grade is grade is greater than or equal to 80, "
+		  		+ "you passed");
 	  }
   }
   @Test
