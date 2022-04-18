@@ -18,7 +18,9 @@ public class CarTests {
 		String model = "Corvette";
 		LargeEngine engine = new LargeEngine();
 		ElectronicIgnition ignitionSystem = new ElectronicIgnition();
-		this.Car = new ConvertibleCar(model, engine, ignitionSystem);
+		String lowerTop = null;
+		String raiseTop = null;
+		this.Car = new ConvertibleCar(model, engine, ignitionSystem, lowerTop, raiseTop);
 	}
 
 	@Test
@@ -36,6 +38,6 @@ public class CarTests {
 
 		boolean isStarted = car.getIsStarted();
 
-		assertFalse(isStarted, "");
+		assertFalse(isStarted, "Can start a car.");
 	}
 }

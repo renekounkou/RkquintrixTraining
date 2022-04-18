@@ -5,4 +5,6 @@ public interface ICar {
 	int getOdometer();
 	boolean getIsStarted();
 	public String getModel();
+	void lowerTop();
+	void raiseTop();
 }

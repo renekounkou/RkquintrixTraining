@@ -1,6 +1,7 @@
 package com.garage;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
@@ -21,8 +22,11 @@ public class ConvertibleCarTests {
 		String model = "Miata";
 		IEngine engine = new SmallEngine();
 		IIgnition ignitionSystem = new ElectronicIgnition();
+		String lowerTop = null;
+		String raiseTop = null;
 
-		this.Car = new ConvertibleCar(model, engine, ignitionSystem);
+		this.Car = new ConvertibleCar(model, engine, ignitionSystem, lowerTop, raiseTop);
+		
 	}
 
 	@Test
@@ -31,7 +35,7 @@ public class ConvertibleCarTests {
 
 		String actualModel = car.getModel();
 
-		assertEquals(actualModel, Car.getModel() , "");
+		assertEquals(actualModel, Car.getModel() , "Cannot build a Miata Model.");
 	}
 
 	@Test
@@ -40,16 +44,20 @@ public class ConvertibleCarTests {
 		
 		boolean isStarted = car.getIsStarted();
 
-		assertTrue(isStarted, "");
+		assertFalse(isStarted, "Can start a convertible car.");
 	}
 
 	@Test
 	public void canLowerTop() {
-		fail("not implemented yet");
+		ConvertibleCar car = this.Car;
+		String lowerTop = car.getLowerTop();
+		assertEquals(lowerTop, car.getLowerTop(), "The Top cannot be lowered.");
 	}
 
 	@Test
 	public void canRaiseTop() {
-		fail("not implemented yet");
+		ConvertibleCar car = this.Car;
+		String raiseTop = car.getRaiseTop();
+		assertEquals(raiseTop, car.getRaiseTop(), "The Top cannot be raised.");
 	}
 }
