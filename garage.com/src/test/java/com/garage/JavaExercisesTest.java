@@ -1,5 +1,6 @@
 package com.garage;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 
 import org.testng.annotations.Test;
 
@@ -95,6 +96,7 @@ public class JavaExercisesTest {
 	  assertEquals(afternoonHour, expectedResult, "The Morning hour is different to the Afternoon hour");
 	  }
   }
+  
   @Test
   public void usingIfandElseStatements() {
 	  int passGrade = 80;
@@ -103,11 +105,12 @@ public class JavaExercisesTest {
 		  
 	  } else {
 		  System.out.println("You failed.");
-		  int expectedResult = passGrade;
-		  assertEquals(passGrade, expectedResult, "If grade is greater than or equal to 80, "
-		  		+ "you passed");
 	  }
+	  int expectedResult = passGrade;
+	  assertEquals(passGrade, expectedResult, "If grade is greater than or equal to 80, "
+	  		+ "you passed");
   }
+  
   @Test
   public void usingaNestedForLoop() {
   int[] myArray = {2, 1, 6, 10, 5, 7, 9, 4, 8, 3};
@@ -115,25 +118,27 @@ public class JavaExercisesTest {
 		  for(int i1 = 0; i1<myArray.length; i1++) {
 			  System.out.println(i);
 			  System.out.println(i1);
-			  int[] expectedResult = myArray;
-			  assertEquals(myArray, expectedResult);
 		  }
 	  }
+	  int[] expectedResult = myArray;
+	  assertEquals(myArray, expectedResult);
   }
+  
   @Test
   public void demonstrateaTryCatchBlock() {
-	  int numb1 = 12;
-	  int numb2 = 0;
+	  double numb1 = 12.00;
+	  double numb2 = 0.0;
 	  try{
-		  int divnumbs = numb1/numb2;
-          int expectedResult = divnumbs;
-		  assertEquals(divnumbs, expectedResult);
-		  System.out.println(divnumbs);
+		  double actualResult = numb1/numb2;
+		  System.out.println(actualResult);
 	  
 	  }catch (ArithmeticException e) {
 		  System.out.println("Done");
+		  
 	  }  
+	  assertFalse(numb2 != 0.0, "Non zero value expected.");
   }
+  
   @Test
   public void demonstrateaForeachLoop() {
 	  String[] colors = {"red", "blue", "yellow", "purple", "green", "black"};
