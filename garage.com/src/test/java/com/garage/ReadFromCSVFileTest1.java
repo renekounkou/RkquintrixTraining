@@ -27,16 +27,14 @@ public class ReadFromCSVFileTest1 {
 	  Map<Integer, ReadHashMap> map = new HashMap<Integer, ReadHashMap>();
 	  
 	  for(CSVRecord record : records) {
-		  ReadHashMap hashMap = new ReadHashMap();
-		  hashMap.setMake(record.get(0));
-		  hashMap.setModel(record.get(1));
-		  map.put(0, hashMap);
-		  
-		  System.out.println(map);
-		  String expectedResult = csvFilePath;
-		  assertEquals(csvFilePath, expectedResult);
+	  ReadHashMap hashMap = new ReadHashMap();
+	  hashMap.setMake(record.get(0));
+	  hashMap.setModel(record.get(1));
+	  map.put(0, hashMap);
+	  System.out.println(map);
+	  String expectedResult = csvFilePath;
+	  assertEquals(csvFilePath, expectedResult);
 	  }
-	  
   }
 }
 

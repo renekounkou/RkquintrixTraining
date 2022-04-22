@@ -19,9 +19,9 @@ public class ReadFromCSVFileTest {
 	  CSVReader reader = new CSVReader(new FileReader(csvFilePath));
 	  List<String[]> data = reader.readAll();
 	  for(String[] row: data) {
-		  System.out.println(Arrays.toString(row));
-		  String expectedResult = csvFilePath;
-		  assertEquals(csvFilePath, expectedResult);
+	  System.out.println(Arrays.toString(row));  
 	  }
+	  String expectedResult = csvFilePath;
+	  assertEquals(csvFilePath, expectedResult);
   }
 }
