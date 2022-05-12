@@ -28,4 +28,7 @@ public class ControlExtensionFactory {
 	public static SliderControlExtension setTheValueto100(WebElement element) {
 		return new SliderControlExtension(element);
 	}
+	public static SelectControlExtension setTheValue(WebElement element) {
+		return new SelectControlExtension(element);
+	}
 }

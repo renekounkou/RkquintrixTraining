@@ -17,13 +17,12 @@ public abstract class SeleniumTestBase {
 	this.driver =  new ChromeDriver();
 	
 	setOptions();
-		
 	}
 
 	@AfterTest
 	public void cleanup() {
 		if(this.driver != null) {
-			//this.driver.quit();
+			this.driver.quit();
 		}
 		
 	}

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import framework.SeleniumTestBase;
 
-public class ControlExtensionTestsBase extends SeleniumTestBase {
+public class DemoQaTests extends SeleniumTestBase {
   @Test
   public void canSelectRadioButton() {
 	  
@@ -36,7 +36,6 @@ public class ControlExtensionTestsBase extends SeleniumTestBase {
 }
   @Test
   public void canSetValuesTest() {
-	  int value = 80;
 	  SliderPage page = new SliderPage(this.getDriver());
 	  page.navigate();
 	  page.setTheValueto80(80);
@@ -53,8 +52,9 @@ public class ControlExtensionTestsBase extends SeleniumTestBase {
   public void canSelectMenue() {
 	  SelectMenuPage page = new SelectMenuPage(this.getDriver());
 	  page.navigate();
-	  page.setTheValue();
-	  page.getTheValue("value");
+	  page.setTheValue("value");
+	  
+	  assertEquals(page.setTheValue("2"), "2");
 	  
   }
   

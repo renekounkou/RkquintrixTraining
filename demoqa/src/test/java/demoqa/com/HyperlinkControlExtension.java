@@ -2,9 +2,8 @@ package demoqa.com;
 
 import org.openqa.selenium.WebElement;
 
-public class HyperlinkControlExtension {
-	private WebElement wrappedElement;
-
+public class HyperlinkControlExtension extends ControlExtensionBase {
+	
 	public HyperlinkControlExtension(WebElement element) {
 		this.wrappedElement = element;
 	}

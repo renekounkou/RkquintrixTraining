@@ -2,8 +2,7 @@ package demoqa.com;
 
 import org.openqa.selenium.WebElement;
 
-public class RadioGroupControlExtension {
-	private WebElement wrappedElement;
+public class RadioGroupControlExtension extends ControlExtensionBase {
 
 	public RadioGroupControlExtension(WebElement element) {
 		this.wrappedElement = element;
