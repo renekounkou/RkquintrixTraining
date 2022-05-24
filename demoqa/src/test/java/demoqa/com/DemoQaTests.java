@@ -55,7 +55,5 @@ public class DemoQaTests extends SeleniumTestBase {
 	  page.setTheValue("value");
 	  
 	  assertEquals(page.setTheValue("2"), "2");
-	  
   }
-  
 }
