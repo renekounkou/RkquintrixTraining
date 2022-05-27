@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="First Suite" verbose="1">
+	<test name="ChromeTests">
+		<parameter name="browserType" value="chrome"></parameter>
+			<packages>
+				<package name="webdrivermanager.*"></package>
+			</packages>
+	</test>
+	<test name="FirefoxTests">
+		<parameter name="browserType" value="firefox"></parameter>
+			<packages>
+				<package name="webdrivermanager.*"></package>
+			</packages>
+	</test>
+</suite>
