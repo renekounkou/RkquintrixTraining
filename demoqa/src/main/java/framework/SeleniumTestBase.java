@@ -13,27 +13,20 @@ public abstract class SeleniumTestBase {
 	@BeforeTest
 	public void setup() {
 	System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
-	
 	this.driver =  new ChromeDriver();
-	
 	setOptions();
 	}
-
 	@AfterTest
 	public void cleanup() {
 		if(this.driver != null) {
 			this.driver.quit();
 		}
-		
 	}
 		protected WebDriver getDriver() {
 			return this.driver;
 	}
-
 		private void setOptions() {
 	    this.driver.manage().window().maximize();
 	    this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 }
-
 }

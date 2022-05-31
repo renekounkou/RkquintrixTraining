@@ -23,7 +23,6 @@ public class SliderPage extends PageObjectBase {
 	public SliderPage(WebDriver driver) {
 		super(driver);
 	}
-	
 	public void navigate() {
 		this.getDriver().navigate().to(URL);
 	}
