@@ -93,7 +93,7 @@ public class JavaExercisesTest {
 	  boolean compareHour = morningHour != afternoonHour;
 	  boolean expectedResult = true;
 	  System.out.println(compareHour);
-	  assertEquals(afternoonHour, expectedResult, "The Morning hour is different to the Afternoon hour");
+	  assertEquals(compareHour, expectedResult, "The Morning hour is different to the Afternoon hour");
 	  }
   }
   
