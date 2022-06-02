@@ -10,7 +10,6 @@ public abstract class PageObjectBase {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
 	protected WebDriver getDriver() {
 		return this.driver;
 	}
